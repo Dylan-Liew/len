@@ -28,15 +28,13 @@ void analyze_char(int c, char_stats *stats) {
 }
 
 void print_summary(const char_stats *stats) {
-    printf("┌──────────┬───────┐\n");
-    printf("│ Type     │ Count │\n");
-    printf("├──────────┼───────┤\n");
-    printf("│ Total    │ %5d │\n", stats->total);
-    printf("│ Letters  │ %5d │\n", stats->letters);
-    printf("│ Digits   │ %5d │\n", stats->digits);
-    printf("│ Spaces   │ %5d │\n", stats->spaces);
-    printf("│ Special  │ %5d │\n", stats->special);
-    printf("└──────────┴───────┘\n");
+    printf("╔═════════════════════════╗\n");
+    printf("║ Total Characters: %5d ║\n", stats->total);
+    printf("║ Letters:          %5d ║\n", stats->letters);
+    printf("║ Digits:           %5d ║\n", stats->digits);
+    printf("║ Spaces:           %5d ║\n", stats->spaces);
+    printf("║ Special:          %5d ║\n", stats->special);
+    printf("╚═════════════════════════╝\n");
 }
 
 int len_from_args(int argc, char *argv[], int start_index, char_stats *stats) {
